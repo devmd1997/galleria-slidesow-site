@@ -1,0 +1,83 @@
+@import "./globals.css";
+
+@layer components {
+  .gallery-details-content-layout {
+    @apply flex flex-col lg:flex-row gap-0 md:gap-8 p-3 md:p-5 lg:pt-11 lg:px-5;
+    @apply max-w-[327px] md:max-w-[668px] lg:max-w-full;
+  }
+  .gallery-details-hero-container {
+    @apply flex flex-col relative w-full max-w-[668px] items-start justify-start;
+    @apply md:flex-row;
+    @apply lg:max-w-[848px];
+  }
+
+  .gallery-info-container {
+    @apply absolute z-front max-md:left-0 max-md:-bottom-17 md:right-0 md:-top-2 lg:top-0;
+    @apply flex flex-col;
+    @apply max-w-[282px] md:max-w-[445px];
+    @apply lg:w-[445px] lg:h-[624px] lg:justify-between;
+  }
+
+  .gallery-detail-title-component {
+    @apply flex flex-col bg-white p-3 md:pl-8 md:pb-8 md:pt-1 md:pr-1 gap-1 md:gap-3 items-center justify-center md:items-start md:justify-end;
+  }
+
+  .gallery-detail-title-component h1 {
+    @apply text-preset-2 text-black;
+  }
+
+  .gallery-detail-title-component h2 {
+    @apply text-preset-4 text-grey-400;
+  }
+
+  .gallery-detail-artist-image-component {
+    @apply flex flex-row w-full items-start justify-start md:justify-end lg:px-12 lg:justify-start;
+  }
+
+  .gallery-detail-description-container {
+    @apply relative flex flex-col w-full max-md:mt-17 md:px-10 md:pt-10 lg:px-0 lg:pt-14 lg:pr-10 items-start justify-start lg:w-[475px];
+  }
+
+  .aditional-info-container {
+    @apply flex flex-col gap-8 py-8 md:py-0 lg:h-[565px] lg:justify-between lg:pt-0;
+  }
+
+  .gallery-detail-description-container p {
+    @apply text-preset-3 text-grey-400 text-left;
+  }
+
+  .source-button {
+    @apply text-preset-5 text-grey-400 hover:text-black flex flex-row items-start justify-start;
+    @apply uppercase cursor-pointer;
+  }
+
+  .gallery-details-date {
+    @apply absolute top-0 max-md:right-0 md:left-0 -z-10;
+    @apply text-preset-1 text-grey-100;
+  }
+
+  .gallery-footer {
+    @apply flex flex-row w-full p-3 items-center justify-between bg-white border-t border-grey-150;
+    /* @apply mt-10 md:mt-4 lg:mt-10; */
+  }
+
+  .gallery-footer-info-container {
+    @apply flex flex-col gap-1;
+  }
+
+  .gallery-footer-info-container h3 {
+    @apply text-preset-3 text-black;
+  }
+
+  .gallery-footer-info-container h4 {
+    @apply text-preset-4 text-grey-400/75;
+  }
+
+  .gallery-footer-slideshow-buttons {
+    @apply flex flex-row gap-3 md:gap-5;
+  }
+
+  .slideshow-button {
+    @apply size-3 cursor-pointer;
+  }
+}

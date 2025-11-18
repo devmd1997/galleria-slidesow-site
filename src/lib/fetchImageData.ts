@@ -39,7 +39,7 @@ async function buildSet(photo: GalleryResult['images'], blur?: BlurFn) {
     }
 }
 
-export async function mapResultToGallery(item: GalleryResult): Promise<Gallery> {
+export async function mapResultToGallery(item: GalleryResult, id: number): Promise<Gallery> {
     try {
         const [artistImage, photoDetails] = await Promise.all([
             safeBuildImage(item.artist.image),
@@ -47,6 +47,7 @@ export async function mapResultToGallery(item: GalleryResult): Promise<Gallery> 
         ])
 
         return {
+            id,
             name: item.name,
             year: item.year,
             description: item.description,
@@ -65,7 +66,7 @@ export async function mapResultToGallery(item: GalleryResult): Promise<Gallery> 
 
 export async function mapResultsToGalleria(results: GalleryResults) {
     try {
-    return await Promise.all(results.map(mapResultToGallery));
+    return await Promise.all(results.map((res, index) => mapResultToGallery(res, index + 1)));
   } catch (err) {
     console.error("❌ [mapResultsToGalleria] Failed to map all galleries:", err);
     return [];

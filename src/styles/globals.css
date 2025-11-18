@@ -42,7 +42,7 @@
 
 @utility text-preset-1 {
   font-family: var(--font-libre-baskerville);
-  font-size: var(--text-xxl);
+  font-size: 100px;
   font-weight: bold;
   line-height: 100%;
   letter-spacing: -0.2px;
@@ -164,5 +164,9 @@
 
   .home-layout {
     @apply flex flex-col justify-center items-center py-3 md:py-5 gap-5 w-full;
+  }
+
+  .detail-page-layout {
+    @apply flex flex-col justify-center items-center;
   }
 }

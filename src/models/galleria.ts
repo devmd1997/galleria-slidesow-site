@@ -6,23 +6,24 @@ export interface ImageMeta {
     blurredData?: string;
 }
 
-interface ArtistDetails {
+export interface ArtistDetails {
     name: string;
     image: ImageMeta;
 }
 
-interface HeroImages {
+export interface HeroImages {
     small: ImageMeta;
     large: ImageMeta;
 }
 
-interface PhotoDetails {
+export interface PhotoDetails {
     thumbnail: ImageMeta;
     hero: HeroImages;
     gallery: ImageMeta;
 }
 
 export interface Gallery {
+    id: number;
     name: string;
     year: number;
     description: string;

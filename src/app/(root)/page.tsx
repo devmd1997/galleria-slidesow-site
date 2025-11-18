@@ -1,5 +1,4 @@
 import GalleryGrid from "@/components/gallery/GalleryGrid";
-import MasonryGrid from "@/components/gallery/Masonry";
 import Spinner from "@/components/utils/Spinner";
 import { getGalleria } from "@/lib/getGalleria";
 import { Suspense } from "react";

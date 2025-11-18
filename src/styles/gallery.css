@@ -2,16 +2,7 @@
 
 @layer components {
   .gallery-layout {
-    @apply w-full grid items-start gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center;
+    @apply w-full h-fit grid items-start gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center;
     @apply max-w-[310px] md:max-w-[660px] lg:max-w-[1360px];
-  }
-
-  .gallery-layout-2 {
-    @apply grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] auto-rows-[10px] grid-flow-row-dense gap-1 w-full;
-  }
-
-  .mask-image {
-    --webkit-mask-image: linear-gradient(to bottom, black, transparent 84%);
-    mask-image: linear-gradient(to bottom, black, transparent 84%);
   }
 }

@@ -18,9 +18,10 @@ export default function GalleryGrid(props: GalleryGridProps) {
 
   return (
     <section ref={masonryContainer} className="gallery-layout">
-      {galleria.map((gallery, index) => (
+      {galleria.map((gallery) => (
         <GalleryCard
-          key={`${gallery.images.gallery.alt}-${index}`}
+          key={`${gallery.images.thumbnail.alt}-${gallery.id}`}
+          id={gallery.id}
           thmbnailImage={gallery.images.thumbnail}
           artist={gallery.artist.name}
           title={gallery.name}

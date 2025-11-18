@@ -10,13 +10,16 @@
   },
   "dependencies": {
     "image-size": "^2.0.2",
+    "motion": "^12.23.24",
     "next": "16.0.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-responsive-masonry": "^2.7.1",
+    "styled-components": "^6.1.19",
     "zod": "^4.1.12"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
