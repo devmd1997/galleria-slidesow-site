@@ -3,8 +3,9 @@ import { useSlideshow } from "@/context/SlideshowContext";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { Suspense } from "react";
 
-export default function Header() {
+function HeaderContent() {
   const { isSlideshowActive, toggleSlideshow } = useSlideshow();
   const router = useRouter();
   const pathname = usePathname();
@@ -37,5 +38,13 @@ export default function Header() {
         <div className="header-baseline" />
       </div>
     </nav>
+  );
+}
+
+export default function Header() {
+  return (
+    <Suspense fallback={null}>
+      <HeaderContent />
+    </Suspense>
   );
 }
