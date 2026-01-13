@@ -2,7 +2,7 @@
 
 @layer components {
   .gallery-details-content-layout {
-    @apply flex flex-col lg:flex-row gap-0 md:gap-8 p-3 md:p-5 lg:pt-11 lg:px-5;
+    @apply flex flex-col lg:flex-row gap-0 md:gap-8 p-3 md:p-5 lg:pt-11 lg:px-5 justify-center items-center;
     @apply max-w-[327px] md:max-w-[668px] lg:max-w-full;
   }
   .gallery-details-hero-container {
@@ -58,6 +58,7 @@
 
   .gallery-footer {
     @apply flex flex-row w-full p-3 items-center justify-between bg-white border-t border-grey-150;
+    @apply relative;
     /* @apply mt-10 md:mt-4 lg:mt-10; */
   }
 
@@ -78,6 +79,37 @@
   }
 
   .slideshow-button {
-    @apply size-3 cursor-pointer;
+    @apply size-3 cursor-pointer disabled:cursor-default;
+  }
+
+  .gallery-progress-bar-container {
+    @apply w-full h-[1px] bg-grey-150 absolute top-0 left-0;
+  }
+
+  .gallery-progress-bar {
+    height: 100%;
+    background-color: #000;
+    transition: width 0.5s ease;
+  }
+
+  .view-image-button {
+    @apply flex flex-row p-2 gap-2 bg-black hover:bg-black/50 items-center justify-start cursor-pointer;
+    @apply absolute z-20 max-md:top-2 left-2 md:bottom-2;
+
+    p {
+      @apply w-fit text-preset-7 text-white uppercase;
+    }
+  }
+
+  .expanded-image-container {
+    @apply flex flex-col w-fit justify-end gap-3 md:gap-4 px-2;
+  }
+
+  .close-expanded-button {
+    @apply text-right text-preset-3 text-white hover:text-white/25 uppercase cursor-pointer;
+  }
+
+  .expanded-image-wrapper {
+    @apply relative flex justify-end items-start max-w-[90vh] max-h-[85vh];
   }
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@styles/globals.css";
 import Header from "../../components/navigation/Header";
+import SlideshowProvider from "@/context/SlideshowContext";
 
 export const metadata: Metadata = {
   title: "Galleria Slideshow",
@@ -16,8 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
+        <SlideshowProvider>
+          <Header />
+          {children}
+        </SlideshowProvider>
       </body>
     </html>
   );

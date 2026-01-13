@@ -5,6 +5,7 @@ interface VariableSizedImageProps {
   desktopImage: ImageMeta;
   tabletImage: ImageMeta;
   mobileImage: ImageMeta;
+  className?: string;
 }
 
 export function VariableSizedImage(props: VariableSizedImageProps) {
@@ -46,7 +47,11 @@ export function VariableSizedImage(props: VariableSizedImageProps) {
       <source media="(min-width: 1440px)" srcSet={desktop} />
       <source media="(min-width: 768px)" srcSet={tablet} />
       <source media="(min-width: 375px)" srcSet={mobile} />
-      <img {...rest} style={{ height: "100%" }} className="w-full md:w-[57%]" />
+      <img
+        {...rest}
+        style={{ height: "100%" }}
+        className={props.className || "w-full md:w-[57%]"}
+      />
     </picture>
   );
 }

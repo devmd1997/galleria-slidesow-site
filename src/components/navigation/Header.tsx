@@ -1,7 +1,20 @@
+"use client";
+import { useSlideshow } from "@/context/SlideshowContext";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Header() {
+  const { isSlideshowActive, toggleSlideshow } = useSlideshow();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleSlideshowToggle = () => {
+    if (!isSlideshowActive && pathname === "/") {
+      router.push("/1");
+    }
+    toggleSlideshow();
+  };
   return (
     <nav>
       <div className="header-layout">
@@ -14,9 +27,12 @@ export default function Header() {
               height={32}
             />
           </Link>
-          <span className="text-grey-400 hover:text-black cursor-pointer uppercase text-preset-5 md:text-preset-6">
-            Start Slideshow
-          </span>
+          <button
+            className="text-grey-400 hover:text-black cursor-pointer uppercase text-preset-5 md:text-preset-6"
+            onClick={handleSlideshowToggle}
+          >
+            {isSlideshowActive ? "Stop Slideshow" : "Start Slideshow"}
+          </button>
         </div>
         <div className="header-baseline" />
       </div>

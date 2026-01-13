@@ -167,6 +167,12 @@
   }
 
   .detail-page-layout {
-    @apply flex flex-col justify-center items-center;
+    @apply flex flex-col w-full justify-center items-center;
+  }
+
+  .overlay-backdrop {
+    @apply fixed top-0 bottom-0 left-0 w-[100vw] h-[100vh] bg-black/85;
+    @apply z-90;
+    @apply flex justify-center items-center;
   }
 }

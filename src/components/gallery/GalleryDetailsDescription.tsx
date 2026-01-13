@@ -3,6 +3,7 @@ import "@styles/galleryDetails.css";
 interface GalleryDetailsDescriptionProps {
   description: string;
   year: number;
+  source: string;
 }
 
 export default function GalleryDetailsDescription(
@@ -13,7 +14,9 @@ export default function GalleryDetailsDescription(
       <div className="gallery-details-date">{props.year}</div>
       <div className="aditional-info-container">
         <p>{props.description}</p>
-        <button className="source-button">Go to Source</button>
+        <a href={props.source} target="_blank" className="source-button">
+          Go to Source
+        </a>
       </div>
     </section>
   );

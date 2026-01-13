@@ -1,5 +1,4 @@
 import { GalleryImageDetail } from "@/components/gallery/GalleryImageDetail";
-import Spinner from "@/components/utils/Spinner";
 import { Suspense } from "react";
 
 export interface GalleryImageDetailProps {
@@ -11,7 +10,7 @@ export default function GalleryImageDetailsPage(
 ) {
   return (
     <main className="detail-page-layout">
-      <Suspense fallback={<Spinner />}>
+      <Suspense fallback={null}>
         <GalleryImageDetail params={props.params} />
       </Suspense>
     </main>

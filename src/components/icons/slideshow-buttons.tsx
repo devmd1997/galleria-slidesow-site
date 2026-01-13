@@ -10,6 +10,10 @@ export const StyledBackButtonIcon = styled(BackButtonIcon)`
   &:hover g {
     stroke: var(--color-grey-200);
   }
+  button:disabled & g {
+    stroke: var(--color-grey-200);
+    opacity: 0.5;
+  }
 `;
 
 export const StyledForwardButtonIcon = styled(ForwardButtonIcon)`
@@ -18,5 +22,9 @@ export const StyledForwardButtonIcon = styled(ForwardButtonIcon)`
   }
   &:hover g {
     stroke: var(--color-grey-200);
+  }
+  button:disabled & g {
+    stroke: var(--color-grey-200);
+    opacity: 0.5;
   }
 `;
